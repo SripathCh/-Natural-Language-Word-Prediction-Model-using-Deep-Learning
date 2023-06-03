@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Major Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <div class="w3-container">
+    <h3 class="w3-padding-64 w3-text-red"><b>MAJOR PROJECT<br>BATCH NUMBER:B12</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <h5 class="w3-bar-item">Sripath cherukuri <br> (221710302061)</h5>
+    <h5 class="w3-bar-item">Yelgonda Aniketh Reddy (221710302065)</h5>
+    <h5 class="w3-bar-item">Bollempally Laxman Reddy (221710302011)</h5>
+    <h5 class="w3-bar-item">Bompelli Sai Krishna <br> (221710302012)</h5>
+  </div>
+</nav>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+   
+  <!-- Word Prediction -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Natural Language Word Prediction Model Using Deep Learning.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-ul w3-light-grey w3-center">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-red w3-xlarge w3-padding-32">Text input</li>
+          <form action="/senddata" method="POST">
+            <li class="w3-padding-16">
+              <input name="textinp" class="w3-input" type="text" placeholder="Enter here..">
+              </li>
+              <li class="w3-padding-16">
+              <button type="submit" name="sub">Predict</button>
+              </li>
+          </form>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="w3-half">
+      <div class="w3-ul w3-light-grey w3-center">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-red w3-xlarge w3-padding-32">Prediction</li>
+          <li class="w3-padding-16">
+            {{textent}}
+            {% for each in predictions %}
+            <li><p>Next word suggestion: {{each}}</p></li>
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- End page content -->
+</div>
+
+</body>
+</html>
