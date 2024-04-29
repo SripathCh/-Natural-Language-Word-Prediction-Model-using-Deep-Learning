@@ -20,3 +20,5 @@ This project involves the development and deployment of a language model using L
 ## Features
 - **Word Prediction**: Uses LSTM networks to predict the next word based on the input sequence.
 - **Flask Web Application**: A simple web interface to interact with the model in real time.
+
+**Note**: This code and repository are for showcasing my projects and are not intended for external use. 
